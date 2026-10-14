@@ -696,7 +696,7 @@ function submitRSVP(){
   var guestList=extraNames.length>0?' ('+[name].concat(extraNames).join(', ')+')':'';
   var guestDetails=attending?'Will ATTEND with '+guests+' guest(s).'+guestList:'Will NOT attend.';
   var body=name+' | '+guestDetails+(message?' | Note: '+message:'');
-  fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({access_key:'REPLACE_WITH_WEB3FORMS_KEY',subject:'RSVP from '+name+' — Kostis & Natasha Wedding',from_name:name,to:'kostisnatashastergakis@gmail.com',message:body})}).catch(function(){}).finally(function(){
+  fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({access_key:'7e9b99ca-bfd6-4186-87c1-77ec7c10e12a',subject:'RSVP from '+name+' — Kostis & Natasha Wedding',from_name:name,to:'kostisnatashastergakis@gmail.com',message:body})}).catch(function(){}).finally(function(){
     document.getElementById('rsvpForm').style.display='none';
     document.getElementById('rsvpSuccess').classList.add('show');
     document.getElementById('successMsg').textContent=attending?'Thank you, '+name+'! We are so excited to celebrate with you.':'Thank you, '+name+'. You will be missed dearly.';
